@@ -28,10 +28,10 @@ export default async function handler(req, res) {
             if (response.ok) {
                 res.status(200).json({ message: 'Сообщение успешно отправлено!' });
             } else {
-                res.status(500).json({ error: 'Ошибка при отправке сообщения хуй' });
+                res.status(500).json({ error: 'Ошибка при отправке сообщения' });
             }
         } catch (error) {
-            res.status(500).json({ error: 'Ошибка при отправке сообщения Пизда' });
+            res.status(500).json({ error: 'Ошибка при отправке сообщения' });
         }
     } else {
         res.status(405).json({ error: 'Метод не поддерживается' });
