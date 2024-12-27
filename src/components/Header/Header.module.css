@@ -1,7 +1,6 @@
-/* components/Footer.module.css */
 .footer {
-    background-color: #1a1a1a; /* Тёмный фон */
-    color: #ffffff; /* Белый текст */
+    background-color: #1a1a1a;
+    color: #ffffff;
     padding: 20px 40px;
 }
 
@@ -55,7 +54,7 @@
 
 .callbackButton,.callbackButtonPhone {
     background-color: transparent;
-    border: 2px solid #ff5733; /* Оранжевая рамка */
+    border: 2px solid #ff5733;
     color: #ff5733;
     padding: 10px 20px;
     font-size: 1rem;

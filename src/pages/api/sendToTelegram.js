@@ -1,9 +1,6 @@
-// pages/api/sendToTelegram.js
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { phone, comment } = req.body;
-
-        // Ваш токен бота и ID чата
         const BOT_TOKEN = '8182716447:AAESARn_ye7lH8JO1v6-DASKq440A4Rc5Ec';
         const CHAT_ID = '-1002347352611';
         const message = `
