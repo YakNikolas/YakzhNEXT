@@ -2,6 +2,11 @@
 import styles from './Header.module.css';
 import React, { useState } from 'react';
 import ModalForm from '../ModalForm/ModalForm';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(faPhone);
 
 
 export default function Header() {
@@ -38,6 +43,7 @@ export default function Header() {
                     </p>
                 </div>
                 <button onClick={openModal} className={styles.callbackButton}>Заказать звонок</button>
+                <button onClick={openModal} className={styles.callbackButtonPhone}><FontAwesomeIcon icon="fa-solid fa-phone" /></button>
             </div>
             <ModalForm isOpen={isModalOpen} onClose={closeModal}></ModalForm>
         </header>

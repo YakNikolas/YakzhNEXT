@@ -9,6 +9,7 @@
 @media (max-width: 768px) {
     .container {
         flex-direction: column-reverse;
+        gap: 0;
     }
     .container img {
         max-width: 100%;

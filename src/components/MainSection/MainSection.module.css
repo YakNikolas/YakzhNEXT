@@ -1,7 +1,7 @@
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     background-image: url('/image1.png');
     background-size: cover;
     background-position: center;
@@ -9,6 +9,7 @@
     color: white;
     height: 100vh;
     overflow: hidden;
+    gap: 1rem;
 }
 
 .left {
@@ -19,7 +20,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     flex: 1;
-    max-width: 50%;
     position: relative;
 }
 .card {
@@ -33,6 +33,7 @@
 .card:nth-child(2) {
     background-image: url('/barnhouse.png');
     background-size: cover; 
+    background-position: center;
 }
 .card:nth-child(3) {
     background-image: url('/taunhauc.png');
@@ -81,17 +82,12 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 20px;
-    }
-    .title {
-        font-size: 1.75rem;
-    }
-    .subtitle {
-        font-size: 1rem;
-    }
-    .right {
-        grid-template-columns: repeat(4, 100%);
+        gap: 0;
     }
     .column {
         margin-bottom: 20px;
+    }
+    .card h3 {
+        font-size: 1rem;
     }
 }

@@ -1,7 +1,7 @@
 'use client'
 import Loader from '../Loader/Loader';
 import styles from './ModalForm.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function ModalForm({ isOpen, onClose }) {

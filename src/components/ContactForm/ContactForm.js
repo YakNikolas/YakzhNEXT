@@ -14,11 +14,6 @@ export default function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!phone || !agreement) {
-            alert('Пожалуйста, заполните обязательные поля!');
-            return;
-        }
-
         setLoading(true);
 
         try {
@@ -80,6 +75,7 @@ export default function ContactForm() {
                         checked={agreement}
                         onChange={(e) => setAgreement(e.target.checked)}
                         className={styles.checkbox}
+                        required
                     />
                     Согласие на обработку персональных данных
                 </label>
