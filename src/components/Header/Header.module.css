@@ -1,0 +1,77 @@
+/* components/Footer.module.css */
+.footer {
+    background-color: #1a1a1a; /* Тёмный фон */
+    color: #ffffff; /* Белый текст */
+    padding: 20px 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoImage {
+    width: 50px;
+    height: 50px;
+}
+
+.companyName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.companyDesc {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin: 0;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.phone {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.schedule {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+.callbackButton {
+    background-color: transparent;
+    border: 2px solid #ff5733; /* Оранжевая рамка */
+    color: #ff5733;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.callbackButton:hover {
+    background-color: #ff5733;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .center{
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+}

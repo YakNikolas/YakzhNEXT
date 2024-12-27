@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    gap: 2rem;
+}
+.container img {
+    max-width: 650px;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .container img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
