@@ -1,5 +1,9 @@
 @import "swiper/swiper-bundle.css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
