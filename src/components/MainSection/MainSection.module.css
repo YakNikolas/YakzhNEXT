@@ -87,6 +87,9 @@
         width: 100%;
         position: relative;
     }
+    .right {
+        gap: 5px;
+    }
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 70% 30%;
