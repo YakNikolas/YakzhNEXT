@@ -36,7 +36,7 @@ export default function Footer() {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className={styles.link}>
-                            Web-space.by
+                            https://github.com/YakNikolas
                         </a>
                     </p>
                 </div>
