@@ -5,6 +5,8 @@
     height: 100vh;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .container {
     display: grid;
@@ -16,6 +18,7 @@
     color: white;
     overflow: hidden;
     gap: 1rem;
+    flex-grow: 1;
 }
 
 .left {
@@ -82,6 +85,7 @@
 @media (max-width: 768px) {
     .left {
         width: 100%;
+        position: relative;
     }
     .container {
         grid-template-columns: 1fr;
