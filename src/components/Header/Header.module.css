@@ -1,7 +1,7 @@
-.footer {
-    background-color: #1a1a1a;
+.header {
     color: #ffffff;
     padding: 20px 40px;
+    border-bottom: rgba(204, 204, 204,  0.2) 1px solid;   
 }
 
 .container {

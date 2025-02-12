@@ -1,45 +1,38 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faArrowRight);
-library.add(faArrowLeft);
-
 
 const Carousel = () => {
   const slides = [
-    ['Создадим ваш идеальный дом в установленные сроки и с 10-летней гарантией','Без головной боли и отклонений от сметы строительства'],
-    ['Мы создаем надежные и современные дома для вашего уютного проживания','Мы создаем надежные и современные дома для вашего уютного проживания'],
-    ['В нашей команде работают квалифицированные сотрудники с опытом работы от 5 лет','Мы оперативно выполняем весь спектр строительных работ']
+    ['Создадим ваш идеальный дом в установленные сроки и с 10-летней гарантией', 'Без головной боли и отклонений от сметы строительства'],
+    ['Мы создаем надежные и современные дома для вашего уютного проживания', 'Мы создаем надежные и современные дома для вашего уютного проживания'],
+    ['В нашей команде работают квалифицированные сотрудники с опытом работы от 5 лет', 'Мы оперативно выполняем весь спектр строительных работ']
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(slides.length - 1);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
+  const goToSlide = (index) => {
+    setPrevIndex(currentIndex);
+    setCurrentIndex(index);
   };
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     goToSlide((currentIndex + 1) % slides.length);
+  //   }, 10000);
+
+  //   return () => clearInterval(interval);
+  // }, [currentIndex]);
 
   return (
+    <>
     <div className={styles.carousel}>
       <div className={styles.slides}>
-        {slides.map(([title,subtitle], index) => (
+        {slides.map(([title, subtitle], index) => (
           <div
             key={index}
-            className={`${styles.slide} ${
-              index === currentIndex ? styles.active : ''
-            }`}
+            className={`${styles.slide} ${index === currentIndex ? styles.active : ''} ${index === prevIndex ? styles.prev : ''}`}
           >
             <h1 className={styles.title}>{title}</h1>
             <h3 className={styles.subtitle}>{subtitle}</h3>
@@ -47,11 +40,16 @@ const Carousel = () => {
           </div>
         ))}
       </div>
-        <div className={styles.arrows}>
-        <button className={styles.leftArrow} onClick={goToPrevious}><FontAwesomeIcon icon="fa-solid fa-arrow-left" /></button>
-        <button className={styles.rightArrow} onClick={goToNext}><FontAwesomeIcon icon="fa-solid fa-arrow-right" /></button>
-        </div>
     </div>
+          <div className={styles.dots}>
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
+              onClick={() => goToSlide(index)}
+            ></button>
+          ))}
+        </div></>
   );
 };
 

@@ -8,9 +8,7 @@ config.autoAddCss = false;
 export default function Home() {
   return (
 <>
-<section>
     <MainSection></MainSection>
-  </section>
   <section>
     <Map></Map>
   </section>

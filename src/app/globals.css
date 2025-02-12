@@ -29,7 +29,3 @@ body::-webkit-scrollbar {
   max-width: 1170px;
   margin: auto;
 }
-header{
-  width: 100%;
-  background-color: #ededed;
-}

@@ -13,7 +13,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <p className={styles.copyright}>
-                        © 2024 ООО "Строительные решения"
+                        © 2025 МММ "ЯкжСтрой"
                     </p>
                 </div>
 
@@ -25,14 +25,14 @@ export default function Footer() {
                 </div>
                 
                 <div className={styles.column}>
-                    <p className={styles.title}>ООО "Строительные решения"</p>
+                    <p className={styles.title}>МММ "ЯкжСтрой"</p>
                     <p>Юридический адрес:</p>
                     <p>РБ, г. Минск, ул. Ленина, 1</p>
                     <p>УНП: 111111111</p>
                     <p>
                         Разработка сайта:
                         <a 
-                        href="https://web-space.by" 
+                        href="https://github.com/YakNikolas" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className={styles.link}>

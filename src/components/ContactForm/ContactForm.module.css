@@ -1,9 +1,6 @@
 .container {
-    background-color: #ffeaea;
     padding: 10px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
 }
 
 .title {
@@ -26,8 +23,15 @@
 }
 
 .label {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     color: #333;
+}
+.inputGroup {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
 }
 
 .required {
@@ -35,7 +39,6 @@
 }
 
 .input, .textarea {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -60,6 +63,13 @@
     height: 16px;
 }
 
+.formFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .button {
     background-color: #ff5733;
     color: white;
@@ -80,9 +90,16 @@
         padding: 10px;
         border-radius: 0px;
         box-shadow: none;
-        background-color: #ffeaea;
+
     }
     .right {
         display: none;
     }
+    .formFooter {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .inputGroup {
+        grid-template-columns: 1fr;
+    }   
 }

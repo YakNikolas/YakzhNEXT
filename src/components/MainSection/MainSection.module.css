@@ -1,20 +1,25 @@
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+.mainSection {
     background-image: url('/image1.png');
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    align-items: stretch;
     padding: 40px;
     color: white;
-    height: 100vh;
     overflow: hidden;
     gap: 1rem;
 }
 
 .left {
-    flex: 1;
-    max-width: 50%;
+    width: 100%;
 }
 .right {
     display: grid;
@@ -76,11 +81,11 @@
 }
 @media (max-width: 768px) {
     .left {
-        max-width: 100%;
+        width: 100%;
     }
     .container {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
         padding: 20px;
         gap: 0;
     }

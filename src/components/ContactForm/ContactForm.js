@@ -49,26 +49,33 @@ export default function ContactForm() {
                 Заполните форму ниже, и наш специалист свяжется с вами в ближайшее время.
             </p>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <label className={styles.label}>
-                    Телефон<span className={styles.required}>*</span>
+                <div className={styles.inputGroup}>
+                    <label className={styles.label} for='tel'>
+                        Телефон<span className={styles.required}>*</span>
+                    </label>
                     <input
-                        type="tel"
-                        placeholder="+375 (99) 999-99-99"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className={styles.input}
-                        required
-                    />
-                </label>
-                <label className={styles.label}>
+                            type="tel"
+                            id='tel'
+                            placeholder="+375 (99) 999-99-99"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className={styles.input}
+                            required
+                        />
+                </div>
+                <div className={styles.inputGroup}>
+                <label className={styles.label} for='comment'>
                     Комментарий
-                    <textarea
+                </label>
+                <textarea
+                        id='comment'
                         placeholder="Ваш комментарий"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                         className={styles.textarea}
                     />
-                </label>
+                </div>
+                <div className={styles.formFooter}>
                 <label className={styles.checkboxLabel}>
                     <input
                         type="checkbox"
@@ -82,6 +89,7 @@ export default function ContactForm() {
                 <button type="submit" className={styles.button} disabled={loading}>
                     {loading ? <Loader></Loader> : 'Отправить'}
                 </button>
+                </div>
             </form>
         </div>
     );

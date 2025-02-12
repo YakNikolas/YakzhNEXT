@@ -89,9 +89,17 @@
 .button:hover {
     background-color: #e64e2e;
 }
-.form p {
-    color: rgb(0, 255, 0);
+.success {
+    color: green;
+    font-size: 1rem;
+    margin-top: auto;
     text-align: center;
+}
+.error {
+    color: red;
+    font-size: 1rem;
+    margin-top: auto; 
+    text-align: center;      
 }
 @media (max-width: 768px) {
     .container{

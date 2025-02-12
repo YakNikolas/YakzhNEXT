@@ -20,13 +20,13 @@ export default function Header() {
     setIsModalOpen(false);
   };
     return (
-        <header className={styles.footer}>
+        <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.left}>
                     <div className={styles.logo}>
                         <img src="/home1.svg" alt="Логотип" className={styles.logoImage} />
                         <div>
-                            <h4 className={styles.companyName}>Строительные решения</h4>
+                            <h4 className={styles.companyName}>ЯкжСтрой</h4>
                             <p className={styles.companyDesc}>строительная компания</p>
                         </div>
                     </div>
